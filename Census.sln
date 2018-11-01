@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4C66C38E-59D0-463D-89CB-2D6FEB7B03C4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Census", "src\Census\Census.csproj", "{70293E8D-3175-45A1-989F-6C35D1A8A362}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FC14576B-A214-4F14-BC30-639BD0AEB7A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70293E8D-3175-45A1-989F-6C35D1A8A362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70293E8D-3175-45A1-989F-6C35D1A8A362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70293E8D-3175-45A1-989F-6C35D1A8A362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70293E8D-3175-45A1-989F-6C35D1A8A362}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{70293E8D-3175-45A1-989F-6C35D1A8A362} = {4C66C38E-59D0-463D-89CB-2D6FEB7B03C4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB7214B6-74EE-47D6-98C5-ED4A97277418}
+	EndGlobalSection
+EndGlobal
