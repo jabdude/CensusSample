@@ -36,8 +36,8 @@ namespace Census.Services
                 {
                     row = excelSheet.CreateRow(censusByCityState.IndexOf(model));
                     row.CreateCell(0).SetCellValue(model.City);
-                    row.CreateCell(0).SetCellValue(model.State);
-                    row.CreateCell(1).SetCellValue(model.Count);
+                    row.CreateCell(1).SetCellValue(model.State);
+                    row.CreateCell(2).SetCellValue(model.Count);
                 }
 
                 workbook.Write(fs);
