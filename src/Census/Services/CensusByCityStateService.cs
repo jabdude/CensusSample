@@ -17,10 +17,10 @@ namespace Census.Services
         {
 
             var censusByCityState = models.GroupBy(x =>  new { x.City, x.State })
-                .Select(x => new CensusByCityStateModel
+                .Select(x => new
                 {
-                    City = x.Key.City,
-                    State = x.Key.State,
+                    x.Key.City,
+                    x.Key.State,
                     Count = x.Count()
                 })
                 .ToList();

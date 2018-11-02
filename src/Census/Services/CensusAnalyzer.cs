@@ -14,7 +14,8 @@ namespace Census.Services
         private readonly ICensusByStateService _censusByStateService;
         private readonly ICensusByCityStateService _censusByCityStateService;
 
-        public CensusAnalyzer(ICensusReaderService reader,
+        public CensusAnalyzer(
+            ICensusReaderService reader,
             ICensusParserService parser, 
             ICreateXLSpreadsheetService spreadsheetService,
             ICensusByStateService censusByStateService,

@@ -13,7 +13,8 @@ namespace Census.Services
         private static ServiceCollection ServiceCollection { get; set; }
         private static ServiceProvider _provider { get; set; }
         
-        public static ServiceProvider Provider { get {
+        public static ServiceProvider Provider { get
+            {
                 if(ServiceCollection == null)
                 {
                     ConfigureServices();
@@ -39,7 +40,7 @@ namespace Census.Services
                 {
                     var services = AppDomain.CurrentDomain.GetAssemblies()
                        .SelectMany(s => s.GetTypes())
-                       .Where(p => type.IsAssignableFrom(p) && !p.IsAbstract);
+                       .Where( p => type.IsAssignableFrom( p ) && !p.IsAbstract );
                    
                     if(services.Any())
                         ServiceCollection.AddTransient(type, services.First()); // only one implementation anyway

@@ -16,7 +16,7 @@ namespace Census.Services
         {
 
             var censusByState = models.GroupBy(x => x.State)
-                .Select(x => new CensusByStateModel
+                .Select(x => new 
                 {
                     State = x.Key,
                     Count = x.Count()
