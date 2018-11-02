@@ -16,7 +16,8 @@ namespace Census.Services
         public void Insert(XSSFWorkbook workbook, string sheetName, IList<CensusModel> models)
         {
 
-            var censusByCityState = models.GroupBy(x =>  new { x.City, x.State })
+            var censusByCityState = models
+                .GroupBy(x =>  new { x.City, x.State })
                 .Select(x => new
                 {
                     x.Key.City,
@@ -30,11 +31,10 @@ namespace Census.Services
                 workbook = new XSSFWorkbook();
 
                 var excelSheet = workbook.CreateSheet(sheetName);
-                var row = excelSheet.CreateRow(0);
 
                 foreach (var model in censusByCityState)
                 {
-                    row = excelSheet.CreateRow(censusByCityState.IndexOf(model));
+                    var row = excelSheet.CreateRow(censusByCityState.IndexOf(model));
                     row.CreateCell(0).SetCellValue(model.City);
                     row.CreateCell(1).SetCellValue(model.State);
                     row.CreateCell(2).SetCellValue(model.Count);
